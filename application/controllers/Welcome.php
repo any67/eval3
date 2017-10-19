@@ -6,11 +6,35 @@ class Welcome extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->helper('form');
-		//$this->load->model('form_model');  
+		$this->load->model('form_model');  
+	}
+	public function index()
+	
+
+	{
+		
+		$this->load->view('eval3');
+		
+
 	}
 
-	public function index()
+
+	 function validar()
+	
+
 	{
-		$this->load->view('formulario');
+
+		$name = $this->input->post('nombre1');
+		$lastname = $this->input->post('apellido1');
+
+		
+		$data = array('nombre' => $this->input->post('nombre1'),'apellido' => $this->input->post('apellido1') );
+
+
+
+        $this->load->view('formulario');
+	
 	}
+
+
 }
