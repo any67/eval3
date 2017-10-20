@@ -13,7 +13,7 @@ class Welcome extends CI_Controller {
 
 	{
 		
-		$this->load->view('eval3');
+		$this->load->view('formulario');
 		
 
 	}
@@ -35,7 +35,7 @@ class Welcome extends CI_Controller {
 
 
 
-		$data = array('nombre' => $this->input->post('nombre'),'apellido' => $this->input->post('apellido')'correo'=> $this-> input->post('correo'));
+		$data = array('nombre' => $this->input->post('nombre'),'apellido' => $this->input->post('apellido'),'correo'=> $this->input->post('correo'));
 
 
 
@@ -43,7 +43,7 @@ class Welcome extends CI_Controller {
 
 
 
-        $this->load->view('formulario');
+        
 	
 	}
 
